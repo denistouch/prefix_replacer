@@ -49,9 +49,6 @@ def prepare_report(raw_report: dict) -> str:
 
 
 def rename_in_folder(folder_path: str, prefix: str, replacement: str) -> str:
-    # prefix = r'IMG_'
-    # extension = '.jpg'
-    # replacement = ''
     total, found, renamed, errors = 0, 0, 0, []
 
     for filename in os.listdir(folder_path):
@@ -92,4 +89,4 @@ if __name__=='__main__':
 
     args = parser.parse_args()
 
-    print(rename_in_folder(args.folder, args.prefix, args.replacement))
+     print(rename_in_folder(getattr(args, 'in'), args.prefix, args.to))
